@@ -4,11 +4,11 @@ export type ReturnedSearch = {
     videoId: string;
     thumbnails: {
         url: string;
-        width: 360;
-        height: 202;
+        width: number;
+        height: number;
     }[];
     title: string[];
-    time: string;
+    time?: string;
 };
 export type ResultData = {
     refinements: string[];
@@ -26,7 +26,7 @@ export function parseData(data: any): ResultData {
         const title = (ele.videoRenderer.title.runs as any[]).map(
             ({ text }) => text
         );
-        const time = ele.videoRenderer.lengthText.simpleText;
+        const time = ele.videoRenderer.lengthText?.simpleText;
         returnedData.push({
             videoId,
             thumbnails,

@@ -8,8 +8,23 @@ function WriteData(data: any) {
 
 describe("findData", () => {
     test("case 1", async () => {
-        const url = "data";
-        const data = await GetData(url);
+        const search = "data";
+        const data = await GetData(search);
+        expect(data.resVideos).not.toBeUndefined();
+        expect(data.resVideos).not.toEqual([]);
+        data.resVideos.forEach((video) => {
+            expect(video.videoId).not.toBeUndefined();
+            expect(video.thumbnails).toBeInstanceOf(Array);
+            expect(video.time).not.toBeUndefined();
+            expect(video.title).toBeInstanceOf(Array);
+        });
+        expect(data.refinements).not.toBeUndefined();
+        expect(data.refinements).toBeInstanceOf(Array);
+        
+    });
+    test("case 1", async () => {
+        const search = "search";
+        const data = await GetData(search);
         WriteData(data);
         expect(data.resVideos).not.toBeUndefined();
         expect(data.resVideos).not.toEqual([]);
@@ -18,6 +33,7 @@ describe("findData", () => {
             expect(video.thumbnails).toBeInstanceOf(Array);
             expect(video.time).not.toBeUndefined();
             expect(video.title).toBeInstanceOf(Array);
+            expect(video.time).not.toBeUndefined();
         });
         expect(data.refinements).not.toBeUndefined();
         expect(data.refinements).toBeInstanceOf(Array);
