@@ -1,0 +1,5 @@
+youtube-playlist/
+node_modules/
+node-ytdl-core/
+*/**/res.json
+**/res.json
