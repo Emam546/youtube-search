@@ -1,9 +1,9 @@
 {
-  "name": "youtube-playlists-js",
-  "version": "1.0.3",
-  "description": "Simple Library fro getting playlist videos from youtube",
+  "name": "youtube-searches",
+  "version": "1.0.0",
+  "description": "Simple Library fro getting search results of youtube",
   "repository": {
-    "url": "https://github.com/Emam546/youtube-playlist.git",
+    "url": "https://github.com/Emam546/youtube-search.git",
     "type": "git"
   },
   "main": "dist/index.js",

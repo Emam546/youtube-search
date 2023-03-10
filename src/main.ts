@@ -1,8 +1,5 @@
 import getData from "./getData";
-// import queryString from "query-string";
 import queryString from "querystring";
-// const queryString = require('query-string');
-// const queryString = require('query-string');
 export type ReturnedSearch = {
     videoId: string;
     thumbnails: {
